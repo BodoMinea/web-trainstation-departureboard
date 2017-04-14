@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/display.css">
+  <link rel="stylesheet" href="../static/css/flipclock.css">
+  <script src="../static/js/angular.js"></script>
+  <link rel="stylesheet" href="../static/css/font-awesome.css">
+  <script src="../socket.io/socket.io.js"></script>
+	<title>Station Board</title>
+</head>
+<body ng-app="display" ng-controller="StopDisplay" 	style="overflow: hidden; font-size: 25px;" id="gett">
+
+<div class="row">
+  <div class="col-md-6"><div style="padding:5px;"><h2 id="title"></h2></div></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"><div style="padding:5px;" class="clock"></div></div>
+</div>
+
+<br>
+
+<div style="padding:5px;">
+
+<div class="panel panel-info">
+<div class="panel-body">
+  <div class="row">
+      <div class="col-md-1 col-xs-1">RANG</div>
+      <div class="col-md-1 col-xs-1">TREN</div>
+      <div class="col-md-3 col-xs-3">DIN DIRECȚIA</div>
+      <div class="col-md-1 col-xs-1">SOSIRE</div>
+      <div class="col-md-1 col-xs-1">PLECARE</div>
+      <div class="col-md-3 col-xs-3">ÎN DIRECȚIA</div>
+      <div class="col-md-1 col-xs-1">LIN.</div>
+      <div class="col-md-1 col-xs-1">ÎNT.</div>
+  </div>
+</div>
+</div>
+
+<div class="panel panel-default" ng-repeat="train in data track by $index" >
+  <div class="row">
+      <div class="col-md-1 col-xs-1">{{train.type}}</div>
+      <div class="col-md-1 col-xs-1">{{train.train}}</div>
+      <div class="col-md-3 col-xs-3">{{train.from}}</div>
+      <div class="col-md-1 col-xs-1">{{train.arrive}}</div>
+      <div class="col-md-1 col-xs-1">{{train.depart}}</div>
+      <div class="col-md-3 col-xs-3">{{train.to}}</div>
+      <div class="col-md-1 col-xs-1">{{train.line}}</div>
+      <div class="col-md-1 col-xs-1">{{train.delay}}</div>
+  </div>
+</div>
+
+</div>
+
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+<script src="../static/js/flipclock.js"></script>
+<script src="../static/js/display.js"></script>
+</body>
+</html>
