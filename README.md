@@ -1,4 +1,6 @@
-# Web-based train station departure board
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) THIS IS NO LONGER MAINTAINED AND CONSIDERED OUTDATED!
+# Please use the [CFR IRIS Scraper](https://github.com/BodoMinea/cfr-iris-scraper) which now includes its own UI!
+## ~~Web-based train station departure board~~
 
 ![Screenshot](screen.png)
 
